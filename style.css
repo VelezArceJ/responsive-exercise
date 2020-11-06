@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Syne Mono', monospace;
+}
+
+/* HEADER */
+
+#nav-logo {
+    width: 105px;
+    background-color: rgb(255, 56, 56);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 78px;
+}
+
+#top-navbar {
+    background-color: rgb(29, 29, 29);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 33px;
+    z-index: 1;
+}
+
+#bottom-navbar {
+    background-color: rgb(170, 170, 255);
+    position: fixed;
+    top: 33px;
+    left: 0;
+    right: 0;
+    height: 45px;
+    z-index: 1;
+}
+
+@media (max-width: 1024px) {
+    #nav-logo {
+        z-index: 2;
+    }
+}
+
+@media (max-width: 768px) {
+    #nav-logo {
+        height: 45px;
+    }
+
+    #top-navbar {
+        z-index: 0;
+    }
+
+    #bottom-navbar {
+        top: 0;
+    }
+}
+
+/* MAIN */
+
+#top-display {
+    display: grid;
+    grid-template-areas: 
+    "large large miniOne"
+    "large large miniTwo";
+    margin: 0 10px;
+    position: relative;
+    top: 85px;
+    height: 400px;
+    column-gap: 7px;
+    row-gap: 7px;
+}
+
+#top-display-large {
+    grid-area: large;
+    background-color: rgb(150, 73, 223);
+}
+
+#top-display-mini-one {
+    grid-area: miniOne;
+    background-color: rgb(187, 115, 255);
+}
+
+#top-display-mini-two {
+    grid-area: miniTwo;
+    background-color: rgb(100, 24, 172);
+}
+
+#latest-news, #funding, #discover, #deals {
+    margin: 0 60px;
+    margin-top: 125px;
+}
+
+#latest-news h2, #funding h2, #discover h2, #deals h2 {
+    margin-bottom: 15px;
+}
+
+#latest-grid {
+    display: grid;
+    grid-template-columns: repeat(4, calc(94% / 4));
+    column-gap: 2%;
+    row-gap: 5%;
+}
+
+#latest-grid figure {
+    background-color: rgb(29, 61, 36);
+    height: 200px;
+}
+
+#funding-grid {
+    display: grid;
+    grid-template-columns: repeat(4, calc(94% / 4));
+    column-gap: 2%;
+    row-gap: 5%;
+}
+
+#funding figure {
+    background-color: rgb(29, 61, 36);
+    height: 200px;
+}
+
+#discover {
+    display: grid;
+    grid-template-columns: repeat(3, calc(96% / 3));
+    column-gap: 2%;
+    row-gap: 5%;
+}
+
+#discover figure {
+    background-color: rgb(29, 61, 36);
+    height: 200px;
+}
+
+#deals {
+    margin-top: 175px;
+}
+
+#deals-grid {
+    display: grid;
+    grid-template-columns: repeat(4, calc(94% / 4));
+    column-gap: 2%;
+    row-gap: 5%;
+}
+
+#deals figure {
+    background-color: rgb(29, 61, 36);
+    height: 200px;
+}
+
+@media (max-width: 1024px) {
+    #top-display {
+        height: 315px;
+    }
+
+    #latest-news, #funding, #discover, #deals {
+        margin: 0 10px;
+        margin-top: 125px;
+    }
+
+    #latest-grid {
+        grid-template-columns: repeat(3, calc(96% / 3));
+    }
+
+    #funding-grid {
+        grid-template-columns: repeat(3, calc(96% / 3));
+    }
+
+    #final-fund {
+        display: none;
+    }
+
+    #discover {
+        grid-template-columns: repeat(2, calc(98% / 2));
+    }
+
+    #deals {
+        margin-top: 225px;
+    }
+
+    #deals-grid {
+        grid-template-columns: repeat(3, calc(96% / 3));
+    }
+}
+
+@media (max-width: 768px) {
+    #top-display {
+        display: flex;
+        flex-direction: column;
+        margin: 0 10px;
+        position: relative;
+        top: 60px;
+        height: 550px;
+    }
+    
+    #top-display figure {
+        background-color: rgb(157, 88, 221);
+        height: 550px;
+    }
+
+    #latest-news, #funding, #discover, #deals {
+        margin: 0 10px;
+        margin-top: 80px;
+    }
+
+    #latest-news h2, #funding h2, #discover h2, #deals h2 {
+        margin-bottom: 15px;
+    }
+
+    #latest-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+        row-gap: 1%;
+    }
+
+    #latest-grid figure {
+        background-color: rgb(29, 61, 36);
+        height: 80px;
+    } 
+
+    #funding-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+        row-gap: 1%;
+    } 
+
+    #funding figure {
+        background-color: rgb(29, 61, 36);
+        height: 200px;
+    }
+
+    #discover {
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+        row-gap: 1%;
+    }  
+
+    #discover figure {
+        background-color: rgb(29, 61, 36);
+        height: 200px;
+    }
+
+    #deals {
+        margin-top: 175px;
+    }
+
+    #deals-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+        row-gap: 1%;
+    }
+
+    #deals figure {
+        background-color: rgb(29, 61, 36);
+        height: 80px;
+    }
+}
+
+/* FOOTER */
+
+footer {
+    margin-top: 100px;
+}
+
+#top-footer {
+    height: 160px;
+    background-color: rgb(43, 43, 43);
+}
+
+#bottom-footer {
+    height: 100px;
+    background-color: rgb(29, 29, 29);
+}
+
+@media (max-width: 768px) {
+    #bottom-footer {
+        height: 125px;
+    }
+}
